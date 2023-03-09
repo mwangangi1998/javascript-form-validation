@@ -1,0 +1,76 @@
+*{
+    padding: 0%;
+    margin: auto;
+    box-sizing: border-box;
+}
+body{
+   
+ justify-content: center;
+ display: flex;
+ align-items: center;
+ min-height: 100vh;
+ background-color: #f6f6f6;
+}
+#myform{
+    background-color: #fff;
+    padding: 20px;
+    width: 400px;
+    text-transform: uppercase;
+}
+.title{
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.form-group{
+    position: relative;
+    margin: 20px 0px;
+}
+
+.success input{
+    border: 3px rgb(24, 151, 24) solid;
+}
+.form-group label{
+    margin-bottom: 5px;
+    display: inline-block;
+}
+.form-group input{
+    width: 100%;
+    padding: 10px;
+}
+.form-group i{
+    visibility: hidden;
+    right: 10px;
+    top: 35px;
+    position: absolute;
+}
+/* success imput field */
+.success i.fa-check-circle{
+visibility: visible;
+color: green;
+}
+.error input{
+    border: 3px rgba(247, 91, 13, 0.945) solid;
+}
+
+/* error input fields */
+.error i.fa-exclamation-circle{
+    visibility: visible;
+    color: rgba(247, 91, 13, 0.945);
+}
+.form-group p{
+    visibility: hidden;
+    font-size: 12px;
+    color: rgba(247, 91, 13, 0.945);
+}
+.error p{
+    visibility:visible;
+}
+#btn{
+    width: 100%;
+    padding: 10px;
+    font-size: larger;
+    color: #fff;
+    border: none;
+    background-color: #7b84d3;
+    text-transform: uppercase;
+}
