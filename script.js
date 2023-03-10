@@ -5,7 +5,7 @@ const inputemail = document.querySelector('#email');
 const inputpassword = document.querySelector('#password');
 const inputcpassword = document.querySelector('#cpassword');
 form.addEventListener('submit', function (event) {
-    event.preventDefault();
+     event.preventDefault();
     ValiditeForm();
 });
 function ValiditeForm() {
@@ -19,15 +19,8 @@ function ValiditeForm() {
     }
 
 
-
-
-    // validate email
-    // validate password
-    // validate cpassword
-
-}
 // valiate last name
-function ValiditeForm() {
+
     if (inputlname.value.trim() == "") {
         setError(inputlname, 'Last name cannot be empty');
     } else if (inputlname.value.trim().length < 5 || inputlname.value.trim().length > 15) {
@@ -36,7 +29,42 @@ function ValiditeForm() {
     else {
         setSuccess(inputlname);
     }
+
+
+    // validate email
+    if(inputemail.value.trim()==""){
+        setError(inputemail, 'provide email, cannot be empty!');
+    } else if (inputemail.value.trim().length < 5 || inputemail.value.trim().length > 25) {
+        setError(inputemail, 'email');
+    }
+    else {
+        setSuccess(inputemail);
+    }
+    // validate password
+    if(inputpassword.value.trim()=="")
+    {
+        setError(inputpassword,'provide password');
+    }
+    else if(inputpassword.value.trim().length<7){
+        setError(inputpassword,'Password cannot be less than 7 characters');
+    }
+    else{
+        setSuccess(inputpassword);
+    }
+    // validate cpassword
+    if(inputcpassword.value.trim()==""){
+        setError(inputcpassword,"confirm password cannot be empty");
+    }
+    else if (inputcpassword.value!==inputpassword.value) {
+        setError(inputcpassword,"password do not match");
+        
+    }
+    else{
+        setSuccess(inputcpassword);
+    }
+
 }
+
 function setError(element, errorMessage) {
     const parent = element.parentElement;
     if (parent.classList.contains('success')) {

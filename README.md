@@ -1,2 +1,2 @@
 Form validation using JS 
-# this is a form validation using javascript 
+#this is a form validation using javascript 
