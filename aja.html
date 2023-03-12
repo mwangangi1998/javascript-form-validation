@@ -13,7 +13,9 @@
 
     <form action="save.php" id="myform" method="" >
       <div class="title">
-         <h2 id="Heading">Create Account</h2>
+         <h2 id="Heading">Create Account</h2>@push ('name') 
+            
+         @endpush
       </div>
         <div class="form-group ">
            <label for="fname">First name</label>
@@ -58,4 +60,6 @@
     </form>
     <script src="script.js"></script>
 </body>
-</html>
+</html>@push ('name') 
+   
+@endpush
